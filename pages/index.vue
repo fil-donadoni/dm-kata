@@ -1,5 +1,9 @@
 <template>
-  <Tutorial/>
+  <div class="page home">
+    <Hero />
+
+    <Tours />
+  </div>
 </template>
 
 <script>

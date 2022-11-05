@@ -1,0 +1,27 @@
+.page.home
+    .home-hero
+        height: 50vh
+        background-image: url('/assets/cover-mobile.svg')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+
+        .claim
+            width: 80vw
+            margin: 3rem auto
+
+            h1,
+            h2
+                color: $white
+                text-align: center
+
+            h2
+                width: 70vw
+                font-size: 1.25rem
+                margin: auto
+
+    @media(min-width: 769px)
+    .page.home
+        .home-hero
+            background-image: url('/assets/cover-desktop.svg')
+

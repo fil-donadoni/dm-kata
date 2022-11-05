@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "slug": "europe",
+        "name": "Europa",
+        "description": "È la culla delle grandi civiltà antiche, di Imperi che hanno navigato nell'oro e sono caduti nelle ceneri; patria di scrittori, poeti e filosofi che hanno posto le basi del pensiero dell'uomo, di artisit che con la loro arte hanno influenzato il mondo. Centro della terra per secoli, da qui partirono i grandi navigatori verso l'ignoto- mentre ora è meta ambita per i viaggiatori da tutto il globo. Ci sono infinite storie da ascoltare e innumerevoli scorci nascosti da ammirare: ogni strada è avventura, ogni angolo una nuova scoperta."
+    },
+    {
+        "id": 2,
+        "slug": "asia",
+        "name": "Asia",
+        "description": "La magica Asia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, ducimus voluptatum nesciunt distinctio consequuntur illum minima iusto, veritatis similique saepe culpa quidem? Dolorem modi molestiae tempora maiores qui maxime, sint, commodi aperiam asperiores illo ea perspiciatis. Quaerat iure fugiat odio nesciunt fuga in sit exercitationem rerum, animi perspiciatis odit, similique hic! Officia quos, deleniti illum repellendus id quia omnis aspernatur nihil magnam dolores!."
+    },
+    {
+        "id": 3,
+        "slug": "africa",
+        "name": "Africa",
+        "description": "L'incredibile Africa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, ducimus voluptatum nesciunt distinctio consequuntur illum minima iusto, veritatis similique saepe culpa quidem? Dolorem modi molestiae tempora maiores qui maxime, sint, commodi aperiam asperiores illo ea perspiciatis. Quaerat iure fugiat odio nesciunt fuga in sit exercitationem rerum, animi perspiciatis odit, similique hic! Officia quos, deleniti illum repellendus id quia omnis aspernatur nihil magnam dolores!."
+    },
+    {
+        "id": 4,
+        "slug": "america",
+        "name": "America",
+        "description": "La pazzesca America! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, ducimus voluptatum nesciunt distinctio consequuntur illum minima iusto, veritatis similique saepe culpa quidem? Dolorem modi molestiae tempora maiores qui maxime, sint, commodi aperiam asperiores illo ea perspiciatis. Quaerat iure fugiat odio nesciunt fuga in sit exercitationem rerum, animi perspiciatis odit, similique hic! Officia quos, deleniti illum repellendus id quia omnis aspernatur nihil magnam dolores!."
+    },
+    {
+        "id": 5,
+        "slug": "oceania",
+        "name": "Oceania",
+        "description": "La fantastica Oceania! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, ducimus voluptatum nesciunt distinctio consequuntur illum minima iusto, veritatis similique saepe culpa quidem? Dolorem modi molestiae tempora maiores qui maxime, sint, commodi aperiam asperiores illo ea perspiciatis. Quaerat iure fugiat odio nesciunt fuga in sit exercitationem rerum, animi perspiciatis odit, similique hic! Officia quos, deleniti illum repellendus id quia omnis aspernatur nihil magnam dolores!."
+    }
+]

@@ -1,0 +1,26 @@
+.input-container
+    position: relative
+
+    input
+        border: solid 1px $lighter_grey
+        border-radius: 0.25rem
+        height: 2.5rem
+        width: 100%
+        padding: .5rem
+        outline: $white
+        font-size: 1rem
+
+        &::placeholder
+            opacity: 1
+            font-weight: 700
+
+    &.has-icon
+        input
+            padding-left: 2.5rem
+
+    .input-icon
+        position: absolute
+        width: 1.5rem !important
+        height: 1.5rem !important
+        left: 0.5rem
+        top: 0.5rem

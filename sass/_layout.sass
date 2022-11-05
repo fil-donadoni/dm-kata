@@ -1,0 +1,79 @@
+body
+    overflow-x: hidden
+
+.is-hcentered
+    display: flex
+    justify-content: center
+
+.is-vcentered
+    display: flex
+    align-items: center
+
+.container
+    margin: 0 1rem
+
+@each $pos in ['top','right','bottom','left']
+    .m-small
+        margin: 0.5rem
+
+    .p-small
+        padding: 0.5rem
+
+    .m#{str-slice($pos, 0, 1)}-small
+        margin-#{$pos}: .5rem !important
+
+    .p#{str-slice($pos, 0, 1)}-small
+        padding-#{$pos}: .5rem !important
+
+    .px-small
+        padding-left: .5rem !important
+        padding-right: .5rem !important
+
+    .py-small
+        padding-top: .5rem !important
+        padding-bottom: .5rem !important
+
+@each $pos in ['top','right','bottom','left']
+    .m-xs
+        margin: .25rem
+
+    .p-xs
+        padding: .25rem
+
+    .m#{str-slice($pos, 0, 1)}-xs
+        margin-#{$pos}: .25rem !important
+
+    .p#{str-slice($pos, 0, 1)}-xs
+        padding-#{$pos}: .25rem !important
+
+    .px-xs
+        padding-left: .25rem !important
+        padding-right: .25rem !important
+
+    .py-xs
+        padding-top: .25rem !important
+        padding-bottom: .25rem !important
+
+@each $size in [0,1,2,3,4,5]
+    @each $pos in ['top','right','bottom','left']
+        .m#{str-slice($pos, 0, 1)}-#{$size}
+            margin-#{$pos}: $size + rem !important
+
+        .p#{str-slice($pos, 0, 1)}-#{$size}
+            padding-#{$pos}: $size + rem !important
+
+    .mx-#{$size}
+        margin-left: $size + rem !important
+        margin-right: $size + rem !important
+
+    .my-#{$size}
+        margin-top: $size + rem !important
+        margin-bottom: $size + rem !important
+
+    .px-#{$size}
+        padding-left: $size + rem !important
+        padding-right: $size + rem !important
+
+    .py-#{$size}
+        padding-top: $size + rem !important
+        padding-bottom: $size + rem !important

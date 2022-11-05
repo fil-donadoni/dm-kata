@@ -1,0 +1,15 @@
+.read-more
+    .read-more-container
+        max-height: 5rem
+        transition: all .4s
+        overflow: hidden
+        -webkit-overflow-scrolling: auto
+    
+    .read-more-chevron
+        width: 1rem
+        margin-left: .25rem
+
+    &.is-expanded
+        .read-more-container
+            max-height: none
+            height: auto !important
