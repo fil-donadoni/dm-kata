@@ -1,6 +1,10 @@
 <template>
     <div class="read-more" :class="{ 'is-expanded': expanded }">
-        <div class="read-more-container" :style="'height: ' + height">
+        <div
+            class="read-more-container"
+            :style="'height: ' + height"
+            ref="container"
+        >
             <div class="read-more-content" ref="content">
                 <slot></slot>
             </div>
@@ -23,7 +27,7 @@ export default {
     props: {
         collapsedHeight: {
             type: Number,
-            default: 190,
+            default: 80,
         },
 
         enabled: {
@@ -48,11 +52,13 @@ export default {
 
     mounted() {
         this.hasMore()
+
+        window.addEventListener('resize', this.hasMore)
     },
 
     methods: {
         hasMore() {
-            this.has_more = this.$refs.content.clientHeight > this.collapsedHeight
+            this.has_more = this.$refs.content.clientHeight > this.$refs.container.clientHeight
         },
 
         showMore() {

@@ -9,6 +9,9 @@ body
     display: flex
     align-items: center
 
+.is-relative
+    position: relative
+
 .container
     margin: 0 1rem
 
@@ -77,3 +80,7 @@ body
     .py-#{$size}
         padding-top: $size + rem !important
         padding-bottom: $size + rem !important
+
+@media(min-width: 769px)
+    .container
+        margin: 0 auto

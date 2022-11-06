@@ -1,19 +1,17 @@
 <template>
     <div v-if="continents.length" class="continents-menu">
-        <div class="container">
-            <ul>
-                <li
-                    v-for="(continent, key) in continents"
-                    :key="key"
-                    :class="{ 'is-active': active === continent.id }"
-                    @click="select(continent.id)"
-                >
-                    <span>
-                        {{ continent.name }}
-                    </span>
-                </li>
-            </ul>
-        </div>
+        <ul>
+            <li
+                v-for="(continent, key) in continents"
+                :key="key"
+                :class="{ 'is-active': active === continent.id }"
+                @click="select(continent.id)"
+            >
+                <span>
+                    {{ continent.name }}
+                </span>
+            </li>
+        </ul>
     </div>
 </template>
 

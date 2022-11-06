@@ -1,0 +1,52 @@
+.menu
+    .menu-items
+        width: 100vw
+        height: 100%
+        left: 50%
+        top: 50%
+        position: fixed
+        transform: translate(-50%,-50%)
+        padding: 0
+        margin: 0
+        transition: 1s all
+        z-index: 1000
+        background: $medium_blue
+        display: block
+        list-style: none
+
+        .menu-item
+            color: white
+
+            a
+                cursor: pointer
+                list-style: none
+                text-align: center
+                font-size: 9vw
+                line-height: 10vh
+                text-transform: uppercase
+                color: white
+                text-decoration: none
+
+    &.is-mobile
+        position: fixed
+        left: 0
+        top: 0
+        z-index: 1000
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 100vh
+        width: 100vw
+        background: $medium_blue
+
+        .menu-items
+            height: auto
+            position: static
+
+            .menu-item
+                display: block
+                text-align: center
+                padding: 0.5rem
+
+                a
+                    font-size: 7vw

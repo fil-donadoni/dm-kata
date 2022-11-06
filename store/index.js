@@ -42,6 +42,11 @@ export const mutations = {
         state.continent_id = continent
     },
 
+
+    setIsMobile(state, value) {
+        state.is_mobile = value
+    },
+
     setSearch(state, search) {
         state.search = search
     },
@@ -49,10 +54,4 @@ export const mutations = {
     setTours(state, tours) {
         state.tours = tours
     },
-}
-
-export const actions = {
-    getIsMobile() {
-        return window.innerWidth <= 768
-    }
 }

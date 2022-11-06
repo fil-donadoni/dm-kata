@@ -1,14 +1,16 @@
 <template>
     <div class="tours-index">
-        <ContinentsMenu />
+        <div class="container">
+            <ContinentsMenu />
 
-        <template v-if="continent && continent.id">
-            <ContinentDescription />
+            <template v-if="continent && continent.id">
+                <ContinentDescription />
 
-            <TrendingTours />
+                <TrendingTours />
 
-            <NotTrendingTours />
-        </template>
+                <NotTrendingTours />
+            </template>
+        </div>
     </div>
 </template>
 

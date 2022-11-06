@@ -53,5 +53,5 @@ export default {
 
   globals: {
     api: new Api()
-  }
+  },
 }

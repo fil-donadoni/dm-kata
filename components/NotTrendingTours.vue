@@ -6,7 +6,6 @@
                     v-model="search_key"
                     icon="search"
                     :placeholder="'Cerca viaggi in ' + continent.name"
-                    @input="filter"
                 />
 
                 <div v-if="filteredTours.length" class="columns is-mobile is-multiline">
@@ -56,10 +55,6 @@ export default {
     methods: {
         durationLabel(days) {
             return days + ' ' + (days > 1 ? 'giorni' : 'giorno')
-        },
-
-        filter() {
-            console.log(this.search_key);
         },
     },
 }

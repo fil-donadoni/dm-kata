@@ -18,8 +18,9 @@
                 </div>
 
                 <div class="column is-narrow">
-                    <!-- TODO: Menu -->
-                    <img src="/assets/icons/menu.svg" class="menu-icon" alt="Menu" />
+                    <Hamburger />
+
+                    <Menu v-if="! $store.is_mobile" />
                 </div>
             </div>
         </div>
@@ -27,7 +28,9 @@
 </template>
 
 <script>
+import Hamburger from './Hamburger.vue'
 export default {
+  components: { Hamburger },
     data() {
         return {
             search_key: null,
