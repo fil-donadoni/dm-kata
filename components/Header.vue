@@ -39,7 +39,6 @@ export default {
 
     methods: {
         search() {
-            // TODO: Sticky
             // TODO: Set query string
             this.$store.commit('setSearch', this.search_key)
         },

@@ -20,7 +20,6 @@ import { mapState } from 'vuex';
 
 export default {
     data() {
-        // TODO: Sticky
         return {
             active: 1,
         }
