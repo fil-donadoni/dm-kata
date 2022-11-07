@@ -4,7 +4,7 @@ function getTourThumbnail(tour) {
     const thumbnail_url = '/api/assets' + tour.thumbnailImage.mobile.thumbnailUrl
 
     return new Promise((resolve, reject) => {
-        if(typeof tour.thumbnailImage.mobile.thumbnailUrl === 'undefined') {
+        if(! tour.thumbnailImage.mobile.thumbnailUrl) {
             resolve(null)
         }
 
