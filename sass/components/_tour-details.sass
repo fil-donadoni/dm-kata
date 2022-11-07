@@ -1,0 +1,108 @@
+.tour-details-modal
+    .modal-card-body
+        padding-top: 0
+
+        .tour-details
+            .tour-image
+                width: calc(100vw - 1rem)
+                margin-left: -1.25rem
+                height: 180px
+                object-fit: cover
+                max-width: none
+
+            h2
+                text-transform: uppercase
+                font-weight: 600
+                line-height: 1.5rem
+                margin-top: 1rem
+
+            .tour-main-data
+                color: $light_grey
+                margin-top: 0.5rem
+
+            .tour-moods
+                display: flex
+                text-align: center
+                width: 100%
+
+                .tour-mood
+                    flex: 1
+
+                    .tour-mood-label
+                        text-transform: uppercase
+                        font-weight: 600
+                        font-size: 0.8rem
+
+                    .tour-mood-rating
+                        font-weight: 600
+                        border: solid 4px
+                        border-radius: 100%
+                        width: 3rem
+                        height: 3rem
+                        margin: auto
+                        line-height: calc(3rem - 4px)
+
+                        &.is-orange
+                            border-color: $orange
+
+                        &.is-yellow
+                            border-color: $yellow
+
+                        &.is-green
+                            border-color: $green
+
+                        &.is-blue
+                            border-color: $dark_blue
+
+            .tour-labels
+                margin-top: 2rem
+
+                .tour-label
+                    padding: 0.5rem 0
+                    display: inline-block
+                    border-bottom: solid 4px
+                    display: flex
+                    display: inline
+                    position: relative
+                    top: -.8rem
+
+                    .masked-image
+                        width: 1.5rem
+                        transform: translateY(0.6rem)
+
+                    &.is-orange
+                        border-color: $orange
+
+                        .masked-image
+                            background: $orange
+
+                    &.is-green
+                        border-color: $green
+
+                        .masked-image
+                            background: $green
+
+                    &.is-yellow
+                        border-color: $yellow
+
+                        .masked-image
+                            background: $yellow
+
+                    &.is-blue
+                        border-color: $dark_blue
+
+                        .masked-image
+                            background: $dark_blue
+
+                    &.is-red
+                        border-color: $red
+
+                        .masked-image
+                            background: $red
+
+@media(min-width: 769px)
+    .tour-details-modal
+        .modal-card-body
+            .tour-details
+                .tour-image
+                    max-width: 700px

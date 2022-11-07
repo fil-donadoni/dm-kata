@@ -2,6 +2,8 @@ export const state = () => ({
     continents: [],
     continent_id: 1,
     is_mobile: null,
+    modal_data: {},
+    open_modals: [],
     search: null,
     tours: [],
 })
@@ -34,6 +36,17 @@ export const getters = {
 }
 
 export const mutations = {
+    hideModal(state, name) {
+        console.log(name, state.open_modals.indexOf(name))
+        state.open_modals.splice(state.open_modals.indexOf(name))
+    },
+
+    showModal(state, params) {
+        state.open_modals.push(params.name)
+
+        state.modal_data[params.name] = params.data
+    },
+
     setContinents(state, continents) {
         state.continents = continents
     },

@@ -3,6 +3,16 @@
         <Hero />
 
         <Tours />
+
+        <modal
+            name="tour_details_modal"
+            ref="tour_details_modal"
+            title="Dettagli tour"
+        >
+            <template slot="body" slot-scope="props">
+                <TourDetails :tour="props.data.tour" />
+            </template>
+        </modal>
     </div>
 </template>
 

@@ -1,7 +1,9 @@
 <template>
     <div class="tours-index">
         <div class="container">
-            <ContinentsMenu />
+            <Sticky :header-offset="72">
+                <ContinentsMenu />
+            </Sticky>
 
             <template v-if="continent && continent.id">
                 <ContinentDescription />

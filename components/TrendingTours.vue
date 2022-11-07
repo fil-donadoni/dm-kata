@@ -4,18 +4,20 @@
             <template v-if="trendingTours.length">
                 <h2 class="mb-1">Trending tours in {{ continent.name }}</h2>
 
-                <div class="trending-tours-gallery">
+                <div class="trending-tours-gallery" :key="componentKey">
                     <div
                         v-for="tour in trendingTours"
                         :key="tour.id"
                         class="trending-tour"
+                        @click="openModal(tour)"
                     >
                         <div class="columns is-mobile">
                             <div class="column is-narrow pr-0">
                                 <img
-                                    :src="getThumbnail(tour)"
+                                    :src="tour.thumbnail || '/assets/icons/camera.svg'"
                                     :alt="tour.thumbnailImage.mobile.altText || tour.title"
                                     class="trending-tour-image"
+                                    :component-key="0"
                                 />
                             </div>
 
@@ -25,7 +27,7 @@
                                 </div>
 
                                 <div class="trending-tour-duration">
-                                    {{ durationLabel(tour.numberOfDays) }}
+                                    {{ duration(tour.numberOfDays) }}
                                 </div>
                             </div>
                         </div>
@@ -43,10 +45,17 @@
 </template>
 
 <script>
-import axios from 'axios';
-import { mapGetters } from 'vuex';
+import { mapGetters } from 'vuex'
+import { durationLabel } from '../helpers/strings'
+import { getTourThumbnail } from '../helpers/images'
 
 export default {
+    data() {
+        return {
+            componentKey: 0,
+        }
+    },
+
     computed: {
         ...mapGetters([
             'continent',
@@ -54,28 +63,32 @@ export default {
         ])
     },
 
+    watch: {
+        trendingTours() {
+            console.log('cambiati trending tours')
+
+            this.trendingTours.forEach(tour => {
+                getTourThumbnail(tour)
+                    .then(url => {
+                        tour.thumbnail = url
+
+                        this.forceRerender()
+                    })
+            })
+        }
+    },
+
     methods: {
-        durationLabel(days) {
-            return days + ' ' + (days > 1 ? 'giorni' : 'giorno')
+        duration(days) {
+            return durationLabel(days)
         },
 
-        getThumbnail(tour) {
-            const thumbnail_url = '/api/assets/thumbnails/' + tour.thumbnailImage.mobile.id + '.jpg'
+        forceRerender() {
+            this.componentKey += 1
+        },
 
-            return thumbnail_url
-
-            // TODO: controllo esistenza file immagine e restituzione img default
-            // return new Promise((resolve, reject) => {
-            //     axios.head(thumbnail_url)
-            //         .then(data => {
-            //             console.log(data)
-            //             resolve(thumbnail_url)
-            //         })
-            //         .catch(error => {
-            //             console.log(error.response.status)
-            //             resolve('/assets/logo.svg')
-            //         })
-            // })
+        openModal(tour) {
+            this.$store.commit('showModal', { name: 'tour_details_modal', data: { tour }})
         },
     },
 }

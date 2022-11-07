@@ -8,37 +8,41 @@
             </li>
 
             <li class="menu-item">
-                <NuxtLink to="/come-funziona">
+                <NuxtLink to="/">
                     Come funziona
                 </NuxtLink>
             </li>
 
             <li class="menu-item">
-                <NuxtLink to="/fasce-eta">
+                <NuxtLink to="/">
                     Fasce d'età
                 </NuxtLink>
             </li>
 
             <li class="menu-item">
-                <NuxtLink to="/offerte">
+                <NuxtLink to="/">
                     Offerte
                 </NuxtLink>
             </li>
 
             <li class="menu-item is-highlighted">
-                <NuxtLink to="/turni-confermati">
+                <NuxtLink to="/">
                     Turni confermati
                 </NuxtLink>
             </li>
 
             <li class="menu-item">
-                <NuxtLink to="/faq">
+                <NuxtLink to="/">
                     FAQ
                 </NuxtLink>
             </li>
 
-            <li class="menu-item">
-                USER
+            <li class="menu-item is-dropdown">
+                <div class="dropdown-container">
+                    <img src="/assets/icons/user.svg" class="user-icon" />
+
+                    <masked-image src="/assets/icons/chevron-down.svg" />
+                </div>
             </li>
         </ul>
     </div>

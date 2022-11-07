@@ -1,6 +1,8 @@
 <template>
     <div class="home-hero">
-        <Header />
+        <Sticky>
+            <Header />
+        </Sticky>
 
         <div class="claim">
             <h1>Tutte le nostre destinazioni</h1>

@@ -12,7 +12,6 @@
 
                 <div class="column">
                     <ReadMore>
-                        <!-- TODO: condizionare solo per mobile -->
                         {{ continent.description }}
                     </ReadMore>
                 </div>

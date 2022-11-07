@@ -15,7 +15,7 @@
         list-style: none
 
         .menu-item
-            color: white
+            color: $white
 
             a
                 cursor: pointer
@@ -23,9 +23,34 @@
                 text-align: center
                 font-size: 9vw
                 line-height: 10vh
-                text-transform: uppercase
-                color: white
+                color: $white
                 text-decoration: none
+
+            &.is-highlighted
+                a
+                    background: $white
+                    color: $red
+                    padding: 0.5rem
+                    border-radius: 0.5rem
+                    font-weight: 600
+
+            &.is-dropdown
+                transform: translateY(0.4rem)
+                cursor: pointer
+
+                .dropdown-container
+                    .user-icon
+                        border-radius: 100%
+                        padding: 0.25rem
+                        background: $white
+                        width: 1.5rem
+                        height: 1.5rem
+
+                    .masked-image
+                        width: 1rem
+                        height: 1rem
+                        margin: 0.25rem
+                        background: $white
 
     &.is-mobile
         position: fixed
@@ -50,3 +75,15 @@
 
                 a
                     font-size: 7vw
+
+@media(min-width: 769px)
+    .menu
+        .menu-items
+            .menu-item
+                &.is-dropdown
+                    .dropdown-container
+                        border: solid 2px $white
+                        border-radius: 2rem
+                        padding: 2px
+                        display: flex
+                        justify-content: center

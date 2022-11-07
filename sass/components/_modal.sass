@@ -1,0 +1,28 @@
+.modal
+    z-index: 10000000
+
+    &.is-open
+        display: flex
+
+        .modal-card
+            border-radius: 1rem
+            width: calc(100vw - 1rem)
+            margin: 0 .5rem
+
+            .modal-card-head
+                margin-bottom: 0
+                padding-bottom: 0
+                padding-top: 1rem
+
+                .modal-title
+                    margin-bottom: 0
+                    font-weight: 600
+
+@media(min-width: 769px)
+    .modal
+        &.is-open
+            .modal-content
+                width: 700px
+
+            .modal-card
+                width: 700px

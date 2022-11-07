@@ -12,15 +12,15 @@
                     <div
                         v-for="tour in filteredTours"
                         :key="tour.id"
-                        class="column is-6"
+                        class="column is-3-desktop is-6-mobile"
                     >
-                        <div class="not-trending-tour">
+                        <div class="not-trending-tour" @click="openModal(tour)">
                             <div class="tour-title">
                                 {{ tour.title }}
                             </div>
 
                             <div class="tour-duration">
-                                {{ durationLabel(tour.numberOfDays) }}
+                                {{ duration(tour.numberOfDays) }}
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,9 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from 'vuex'
+
+import { durationLabel } from '../helpers/strings'
 
 export default {
     data() {
@@ -53,8 +55,12 @@ export default {
     },
 
     methods: {
-        durationLabel(days) {
-            return days + ' ' + (days > 1 ? 'giorni' : 'giorno')
+        duration(days) {
+            return durationLabel(days)
+        },
+
+        openModal(tour) {
+            this.$store.commit('showModal', { name: 'tour_details_modal', data: { tour }})
         },
     },
 }
