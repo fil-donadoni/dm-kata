@@ -37,7 +37,6 @@ export const getters = {
 
 export const mutations = {
     hideModal(state, name) {
-        console.log(name, state.open_modals.indexOf(name))
         state.open_modals.splice(state.open_modals.indexOf(name))
     },
 

@@ -65,8 +65,6 @@ export default {
 
     watch: {
         trendingTours() {
-            console.log('cambiati trending tours')
-
             this.trendingTours.forEach(tour => {
                 getTourThumbnail(tour)
                     .then(url => {
